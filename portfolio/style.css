@@ -1,1 +1,121 @@
-/* style */
+@font-face {
+    font-family: Marriweather;
+    src: url("assets/fonts/Merriweather-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.container {
+    /* Change width to max-windth on portfolio-2*/
+    /* max-width: 1440px; */
+    width: 1440px;
+    margin: 0;
+    padding: 0, 20px;
+    
+
+}
+
+/* delete border after job */
+body {
+    border: 1px solid red
+    
+}
+
+.header {
+    background: url('./assets/img/bgHeroAndNAV.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    /* 'ЭТО БЫЛО В ГАЙДЕ */
+    display: flex;
+    justify-content: center;
+    height: 90px;
+  }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+/* identical to box height, or 250% */
+    color: #FFFFFF;
+}
+
+.nav {
+    min-width: 500px;
+    min-height: 50px;
+    margin-left: auto;
+    
+}
+
+.nav-list {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+.nav-item {
+    padding: 15px;
+/* не поехала бы верстkа с RU/EN из за этого */
+}
+
+.nav-link {
+    text-transform: capitalize;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+.language {
+    min-width: 70px;
+    min-height: 50px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 50px;
+    /* identical to box height, or 250% */
+    text-align: center;
+}
+
+.hero-container {
+    min-width: 1440px;
+    min-height: 820px; 
+    background-image: url('assets/img/bgHeroAndNAV.jpg');
+    background-position: center -90px;
+    background-repeat: no-repeat;
+}
