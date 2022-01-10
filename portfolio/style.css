@@ -21,9 +21,19 @@
     box-sizing: border-box;
 }
 
+/* плавная прокрутка навигации */
+html {
+    scroll-behavior: smooth; 
+  }
+
 a {
     text-decoration: none;
     color: #FFFFFF;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #bdae82;
 }
 
 .container {
@@ -40,9 +50,8 @@ body {
     color: #FFFFFF;
     font-size: 20px;
     margin: 0;
-    /* background-color: #000; */
-    background-color: brown;
-    /* padding: 0; */     
+    background-color: #000;
+    /* background-color: brown; */
 }
 
 .header {
@@ -62,20 +71,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0px 20px; */
+
 
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    /* line-height: 50px; */
-/* identical to box height, or 250% */
 
 }
+
+.logo {
+    background-image: url(assets/svg/logo\ 1.svg);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 1s;    
+}
+
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
+  }
 
 .nav {
     display: flex;
     min-width: 500px;
-    /* min-height: 50px; */
     margin-left: auto;
 }
 
@@ -91,11 +111,6 @@ body {
 
     padding-right: 30px;
 }
-
-/* .nav-item { */
-    /* padding: 0px 15px; */
-/* не поехала бы верстkа с RU/EN из за этого */
-/* } */
 
 .nav-link {
     text-transform: capitalize;
@@ -114,7 +129,6 @@ body {
     font-style: normal;
     font-weight: bold;
     line-height: 50px;
-    /* identical to box height, or 250% */
     text-align: center;
 }
 
@@ -153,7 +167,7 @@ h1 {
     font-weight: bold;
     font-size: 60px;
     line-height: 120px;
-    /* identical to box height, or 200% */
+
 }
 
 .hero-text {
@@ -165,7 +179,6 @@ h1 {
     font-style: normal;
     font-weight: normal;
     line-height: 40px;
-    /* or 200% */
 
 }
 
@@ -187,9 +200,16 @@ h1 {
     font-weight: normal;
     font-size: 20px;
     line-height: 40px;
-    /* identical to box height, or 200% */
 
     text-align: center;
+
+    transition: 0.5s; 
+}
+
+.button:hover {
+    background-color: #000;
+    color: #bdae82;
+    border: 2px solid #bdae82;
 }
 
 
@@ -209,9 +229,8 @@ section {
     overflow: hidden;
     width: 50%;
     /* border: 1px solid red; */
-    /* background-image: linear-gradient(to top, #000 70px, #bdae82 67px, #BDAE82 72px, #000 44px); */
     background-image: linear-gradient(to top, #000 99px, #bdae82 100px, #BDAE82 103px, #000 47px);
-    padding: 65px 0px 30px 0px;
+    padding: 65px 0px 27px 0px;
 }
 
 h2 {
@@ -349,12 +368,30 @@ h2 {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 705px;
     background-image: url('assets/img/video-player.jpg');
     background-position: center top;
     background-repeat: no-repeat;
   }
+
+    .play {
+    background-color: transparent;
+    border: none;
+  }
+
+  .btn {
+      cursor: pointer;
+  }
+
+  .btn:hover {
+      width:  130%;
+      height: 130%;
+
+  }
+
+
   
 .price-items {
     display: flex;
@@ -429,9 +466,8 @@ h2 {
 .contacts-container {
 /*   
   display: flex;
-  justify-content: end;
-
-  padding: 20px 0px; */
+  justify-content: end; 
+  */
 
   background: url('assets/img/contacts.jpg');
   background-size: auto 700px;
