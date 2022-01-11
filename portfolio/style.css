@@ -206,10 +206,14 @@ h1 {
     transition: 0.5s; 
 }
 
-.button:hover {
+.dark-button {
     background-color: #000;
     color: #bdae82;
     border: 2px solid #bdae82;
+}
+
+.button:hover {
+    color:#FFFFFF;
 }
 
 
@@ -386,12 +390,9 @@ h2 {
   }
 
   .btn:hover {
-      width:  130%;
-      height: 130%;
-
+      filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
   }
-
-
   
 .price-items {
     display: flex;
@@ -430,7 +431,8 @@ h2 {
     line-height: 56px;
     /* identical to box height, or 200% */
     text-align: center;
-    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .value {
@@ -508,6 +510,18 @@ h2 {
     height: 50px;
     border: 2px solid #bdae82;
     background: none;
+
+    color: #bdae82;
+    font-size: inherit;
+}
+
+textarea {
+    color: #bdae82;
+    font-size: inherit;
+}
+
+.message-button {
+    padding-top: 5px;
 }
 
 .message {
@@ -547,7 +561,6 @@ h2 {
     font-size: 20px;
     line-height: 50px;
 }
-
 
 .rsschool {
     font-family: Inter;
