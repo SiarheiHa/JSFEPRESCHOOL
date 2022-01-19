@@ -37,9 +37,7 @@ a:hover {
 }
 
 .container {
-    /* Change width to max-windth on portfolio-2*/
-    /* max-width: 1440px; */
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
     
@@ -50,15 +48,17 @@ body {
     color: #FFFFFF;
     font-size: 20px;
     margin: 0;
-    background-color: #000;
-    /* background-color: brown; */
+    /* background-color: #000; */
+    background-color: brown;
 }
 
+
+/* ---HEADER-------------------------------------------------------------- */
 .header {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     height: 90px;
-    min-width: 1440px;
+    /* min-width: 1440px; */
   }
 
 .header-container {
@@ -71,6 +71,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
 
     font-family: Inter;
@@ -95,7 +96,6 @@ body {
 
 .nav {
     display: flex;
-    min-width: 500px;
     margin-left: auto;
 }
 
@@ -132,19 +132,13 @@ body {
     text-align: center;
 }
 
-/* .main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  } */
-
+/* ---HERO-------------------------------------------------------------- */
 
 #hero {
     display: block;
 }
 
 .hero-container {
-    min-width: 1440px;
     min-height: 820px; 
     background-image: url('assets/img/bgHeroAndNAV.jpg');
     background-position: center -90px;
@@ -172,7 +166,6 @@ h1 {
 
 .hero-text {
     width: 470px;
-    height: 120px;
     margin: 10px 0;
     
     font-family: Inter;
@@ -220,25 +213,24 @@ h1 {
 section {
     display: flex;
     justify-content: center;
-    /* border: 1px solid red; */
     flex-direction: column;
     align-items: center;
 }
 
-
+/* ---SKILLS------------------------------------------------------------- */
 
 .wrapper {
     display: flex;
     justify-content: center;
     overflow: hidden;
     width: 50%;
-    /* border: 1px solid red; */
     background-image: linear-gradient(to top, #000 99px, #bdae82 100px, #BDAE82 103px, #000 47px);
-    padding: 65px 0px 27px 0px;
+    padding: 100px 0px 60px 0px;
 }
 
 h2 {
     padding: 0px 20px;
+    margin: 0px;
     background-color: #000;
     font-family: Merriweather;
     font-style: normal;
@@ -253,20 +245,19 @@ h2 {
 .skills-items {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    gap: 40px;
   }
 
   .skill-item {
     background-position: center top;
     background-repeat: no-repeat;
-    max-width: 25%;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: auto;
-    /* height: 240px; */
     padding: 100px 0px 0px 0px;
 
   }
@@ -297,8 +288,6 @@ h2 {
     font-weight: bold;
     font-size: 20px;
     line-height: 40px;
-    /* identical to box height, or 200% */
-
     text-align: center;
     margin: 0px;
 }
@@ -312,14 +301,16 @@ h2 {
     /* or 200% */
 
     text-align: center;
-    padding: 0px 40px;
-    margin: 20x 0px 10px 0px;
+    padding: 0px 20px 0px 20px;
+    margin: 21px 0px 10px 0px;
 }
 
+/* ---PORTFOLIO-------------------------------------------------------------- */
 .portfolio-buttons {
     display: flex;
-    flex-direction: row;
     align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
     
 }
@@ -331,7 +322,6 @@ h2 {
 
 .portfolio-photos {
     width: 100%;
-    /* height: 1145px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -368,6 +358,8 @@ h2 {
     background-image: url('assets/img/portfolio-img-5.jpg');
 }
 
+/* ---VIDEO-------------------------------------------------------------- */
+
 .video-player {
     position: relative;
     display: flex;
@@ -393,18 +385,17 @@ h2 {
       filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
       contrast(87%);
   }
+
+  /* ---PRICE-------------------------------------------------------------- */
   
 .price-items {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 505px;
-    justify-content: space-between;
-    align-items: stretch;
-    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     gap: 25px;
-    /* padding: 0px 0px; */
     margin: 0px 0px 100px 0px
   }
 
@@ -413,11 +404,11 @@ h2 {
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
-    /* flex-wrap: wrap; */
     text-align: center;
 
     /* надо что-то придумать с шириной */
     width: 450px;
+    height: 505px;
     
     padding: 10px;
     border: 5px solid #bdae82;
@@ -429,7 +420,6 @@ h2 {
     font-weight: bold;
     font-size: 28px;
     line-height: 56px;
-    /* identical to box height, or 200% */
     text-align: center;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -442,10 +432,7 @@ h2 {
     font-size: 24px;
     line-height: 48px;
     margin: 5px 0px 20px 0px;
-    /* identical to box height, or 200% */
-
     text-align: center;
-
     color: #BDAE82;
 }
 
@@ -456,8 +443,6 @@ h2 {
     font-weight: normal;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */
-
     text-align: center;
 }
 
@@ -465,12 +450,13 @@ h2 {
     padding: 40px;
 }
 
-.contacts-container {
-/*   
-  display: flex;
-  justify-content: end; 
-  */
+/* ---CONTACTS-------------------------------------------------------------- */
 
+#contacts {
+    align-items: end;
+}
+
+.contacts-container {
   background: url('assets/img/contacts.jpg');
   background-size: auto 700px;
   background-position: center center;
@@ -481,18 +467,21 @@ h2 {
 }
 
 .contact-form {
-    padding-left: 950px;
+    display: flex;
+    flex-direction: column;
     padding-top: 32px;
     
 }
 
 .contact-form > form {
-    margin: 20px 0;
+    margin: 0;
+    padding: 10px 0px;
 }
 
 .contact-form > h2 {
     background-color: transparent;
-    padding: 0px;
+    padding: 30px 0px;
+    margin: 0px;
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
@@ -506,6 +495,7 @@ h2 {
 }
 
 .input-contacts {
+    padding: 0px 20px;
     width: 450px;
     height: 50px;
     border: 2px solid #bdae82;
@@ -520,8 +510,8 @@ textarea {
     font-size: inherit;
 }
 
-.message-button {
-    padding-top: 5px;
+.contact-form > .message-button {
+    padding-top: 15px;
 }
 
 .message {
@@ -529,6 +519,13 @@ textarea {
     height: 100px;
     border: 2px solid #bdae82;
     background: none;
+
+    padding: 0px 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 ::placeholder {
@@ -538,23 +535,34 @@ textarea {
     background: none;
   }
 
+  /* ---FOOTER-------------------------------------------------------------- */
 
 .footer {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     height: 150px;
 }
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
+    min-height: 150px;
 }
 
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
 
 .footer-data {
+    padding: 0px;
+    margin: 0px;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -568,16 +576,23 @@ textarea {
     font-weight: normal;
     font-size: 20px;
     line-height: 50px;
-    padding-left: 85px;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* .social-networks { */
-    /* min-width: 500px; */
-    /* min-height: 50px; */
-    /* margin-left: auto; */
-/* } */
+.social-networks{
+    min-width: 200px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .social-list {
+    width: 188px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     /* flex-wrap: wrap; */
     /* justify-content: flex-end; */
