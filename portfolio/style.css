@@ -49,8 +49,8 @@ body {
     font-weight: normal;
     font-size: 20px;
     margin: 0;
-    /* background-color: #000; */
-    background-color: brown;
+    background-color: #000;
+    /* background-color: brown; */
 }
 
 
@@ -67,9 +67,16 @@ body {
     background-repeat: no-repeat;
     background-position: center 0;
     height: 100%;
-    
     /* part 2 */
     /* display: flex; */
+}
+@media (max-width:965px) {
+    .header-container {
+        background: url('./assets/img/bgHeroAndNAVtablet.jpg');
+        background-position: center 0px;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+    }
 }
 
 .header-content {
@@ -77,10 +84,11 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 
     /* part 2     */
     height: 90px;
-    
+    overflow-x: hidden;
 }
 
 @media (max-width:950px) {
@@ -108,12 +116,22 @@ body {
     margin-left: auto;
 }
 
-@media (max-width:950px) {
+@media (max-width:768px) {
     .nav {
-        display: none;
+        display: block;
+        background-color: #000;
+        position: absolute;
+        right: -200%;
+        top: 0;
+        z-index: 10;
+        transition: 0.5s;
     }
 }
 
+.open-nav {
+    /* display: block; */
+    right: 0;
+}
 
 .nav-list {
     display: flex;
@@ -122,11 +140,46 @@ body {
     align-items: center;
     list-style: none;
     justify-content: space-between;
-
     width: 500px;
-
     padding: 0 30px;
 }
+@media (max-width:768px) {
+    .nav-list {
+        width: 620px;
+        height: 1024px;
+        display: block;
+        position: relative;
+        font-size: 35px;
+        line-height: 73px;
+        top: 134px;
+        left: 127px;
+        padding: 0;
+        margin: 0;
+
+    }
+}
+
+@media (max-width:520px) {
+    .nav-list {
+        width: 620px;
+        height: 1024px;
+        display: block;
+        position: relative;
+        font-size: 35px;
+        line-height: 73px;
+        top: 134px;
+        left: 310px;
+        padding: 0;
+        margin: 0;
+
+    }
+}
+@media (max-width:768px) {
+    .nav-item {
+    padding-bottom: 16px;
+    }
+}
+
 
 .nav-link {
     text-transform: capitalize;
@@ -138,7 +191,14 @@ body {
 .language {
     min-width: 70px;
     font-weight: bold;
-    text-align: center;
+    text-align: justify;
+    /* возможно надо вынести в медиа */
+    /* margin-left: auto; */
+}
+@media (max-width:768px) {
+    .language {
+        margin-left: auto;
+    }
 }
 
 /* ---HERO-------------------------------------------------------------- */
@@ -154,9 +214,13 @@ body {
     background-repeat: no-repeat;
 }
 
-@media (max-width:1440px) {
+@media (max-width:965px) {
     .hero-container {
         min-height: 500px;
+        background: url('./assets/img/bgHeroAndNAVtablet.jpg');
+        background-position: center -90px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -307,6 +371,12 @@ section {
     }
   }
 
+  @media (max-width: 752px) {
+    .skills-items {
+        justify-content: center;
+    }
+  }
+
   .skill-item {
     background-position: center top;
     background-repeat: no-repeat;
@@ -392,6 +462,7 @@ section {
 
 .portfolio-photos {
     width: 100%;
+    min-height: 1205px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -399,10 +470,26 @@ section {
     padding: 60px 0px 0px 0px;
 }
 
+/* КОСТЫЛЬ */
+@media (max-width: 490px) {
+    .portfolio-photos {
+        min-height: 2250px;
+    }
+  }
+
 .portfolio-photo {
-    width: 450px;
-    height: 560px;
+    min-width: 450px;
+    min-height: 560px;
 }
+
+@media (max-width: 490px) {
+    .portfolio-photo {
+        min-width: 100%;
+        min-height: 30%;
+        background-size: cover;
+    }
+  }
+
 
 .portfolio-photo:nth-child(1) {
     background-image: url('assets/img/portfolio-img.jpg');
@@ -450,13 +537,14 @@ section {
     height: 705px;
     background-image: url('assets/img/video-player.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: left top;
     background-repeat: no-repeat;
   }
 
   @media (max-width: 965px) {
     .video-player {
         height: 418px;
+        margin-top: 5px;
     }
   }
 
@@ -570,6 +658,7 @@ section {
 .contacts-container {
   background: url('assets/img/contacts.jpg');
   background-size: auto 700px;
+  /* background-size: cover; */
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -580,6 +669,7 @@ section {
 @media (max-width: 965px) {
     .contacts-container {
         height: 600px;
+        background-size: cover;
     }
   }
 
@@ -592,6 +682,12 @@ section {
 @media (max-width: 965px) {
     .contact-form {
         align-items: center;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .contact-form {
+        width: calc(100% - 40px);
     }
   }
 
@@ -641,6 +737,12 @@ textarea {
     font-size: inherit;
 }
 
+@media (max-width: 560px) {
+    .input-contacts {
+        width: 100%;
+    }
+  }
+
 .contact-form > .message-button {
     padding-top: 15px;
 }
@@ -658,6 +760,13 @@ textarea {
     font-size: 20px;
     line-height: 40px;
 }
+
+@media (max-width: 560px) {
+    .message {
+        width: 100%;
+    }
+  }
+
 
 ::placeholder {
     font-family: inherit;
@@ -737,3 +846,55 @@ textarea {
     justify-content: space-between;
     gap: 20px;
 }
+
+.social-link:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    padding: 7px 0px;
+    margin-left: 20px;
+  }
+
+  @media (max-width:768px) {
+    .hamburger {
+        display: flex;
+    }
+}
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    background: #FFFFFF;
+    /* margin: 3px 0; */
+    z-index: 15;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger.open .line1 {
+    transform: rotate(-50deg) translate(-10px, 10px);
+  }
+  
+  .hamburger.open .line2 {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line3 {
+    transform: rotate(50deg) translate(-5px, -6px);
+  }
+
+.abrakadabra {
+    overflow-x: hidden;
+    position: relative
+  }
