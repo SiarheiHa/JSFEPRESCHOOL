@@ -121,10 +121,11 @@ body {
         display: block;
         background-color: #000;
         position: absolute;
-        right: -200%;
+        right: -300%;
         top: 0;
         z-index: 10;
         transition: 0.5s;
+        box-shadow: -120px 0 rgba(0, 0, 0, 0.5);
     }
 }
 
