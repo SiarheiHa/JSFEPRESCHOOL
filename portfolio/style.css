@@ -74,10 +74,20 @@ body {
     .header-container {
         background: url('./assets/img/bgHeroAndNAVtablet.jpg');
         background-position: center 0px;
-        /* background-size: cover; */
+        background-size: cover;
         background-repeat: no-repeat;
     }
 }
+
+@media (max-width:650px) {
+    .header-container {
+        background: url('./assets/img/bgHeroAndNAVtablet.jpg');
+        /* background-position: center 0px; */
+        background-size: auto;
+        /* background-repeat: no-repeat; */
+    }
+}
+
 
 .header-content {
     display: flex;
@@ -493,27 +503,27 @@ section {
 
 
 .portfolio-photo:nth-child(1) {
-    background-image: url('assets/img/portfolio-img.jpg');
+    background-image: url('assets/img/autumn/1.jpg');
 }
 
 .portfolio-photo:nth-child(2) {
-    background-image: url('assets/img/portfolio-img-1.jpg');
+    background-image: url('assets/img/autumn/2.jpg');
 }
 
 .portfolio-photo:nth-child(3) {
-    background-image: url('assets/img/portfolio-img-2.jpg');
+    background-image: url('assets/img/autumn/3.jpg');
 }
 
 .portfolio-photo:nth-child(4) {
-    background-image: url('assets/img/portfolio-img-3.jpg');
+    background-image: url('assets/img/autumn/4.jpg');
 }
 
 .portfolio-photo:nth-child(5) {
-    background-image: url('assets/img/portfolio-img-4.jpg');
+    background-image: url('assets/img/autumn/5.jpg');
 }
 
 .portfolio-photo:nth-child(6) {
-    background-image: url('assets/img/portfolio-img-5.jpg');
+    background-image: url('assets/img/autumn/6.jpg');
 }
 
 /* ---VIDEO-------------------------------------------------------------- */
@@ -778,11 +788,11 @@ textarea {
 
   /* ---FOOTER-------------------------------------------------------------- */
 
-.footer {
+/* .footer { */
     /* display: flex; */
     /* justify-content: center; */
     /* height: 150px; */
-}
+/* } */
 
 .footer-container {
     display: flex;
