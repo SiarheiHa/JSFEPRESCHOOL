@@ -10,8 +10,138 @@
     font-weight: 600;
 }
 
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
+    background-color: #373B69;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: #fff;
 }
+
+
+
+.header {
+}
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 80px;
+}
+.search {
+    min-width: 300px;
+    min-height: 40px;
+    border-radius: 15px;
+    padding-left: 20px;
+
+}
+
+::-webkit-input-placeholder { text-align: center; }
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+}
+.main {
+    background-color: #22254B;
+    flex-grow: 1;
+}
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie-item {
+    width: 300px;
+    background-color: #373B69;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.poster {
+    width: 100%;
+}
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.movie-title {
+    width: 80%;
+}
+.rating {
+    border-radius: 50%;
+    background-color: #22254B;
+    padding: 5px;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: #8186b4;
+    transition: 0.5s;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.movie-item:hover .overview{
+    transform: translate(0%);
+}
+
+.footer {
+}
+.footer-container {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+
+
+  }
+.footer-data {
+}
+.github-link {
+}
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/svg/rss.svg);
+  }
+
+  .rss-logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
+  }
+  
+  a {
+    color: inherit;
+    transition: 0.5ms;
+  }
+  
+  a:hover {
+    color: #bdae82;
+  }
