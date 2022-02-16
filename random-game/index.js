@@ -1,5 +1,11 @@
+console.log(
+  'Привет! Таблица результатов заполняется после каждого проигрыша. Для того чтобы быстро проиграть можно нажать клавижу противоположную движению змейки (если ползет вправо нажать стрелку влево или "A" и т.д.)'
+);
+console.log("все пункты задания выполнены");
+
 let scoreBlock = document.querySelector(".score-count"); // отображение очков
 let score = 0; // очки
+let itBegin = 0;
 
 //настройки игры:
 const config = {
@@ -29,7 +35,7 @@ let context = canvas.getContext("2d");
 let scoreData = [];
 let scoreItems = document.querySelector(".score-items");
 
-drawScore();
+// drawScore();
 
 function drawScoreItem() {
   scoreItems.innerHTML = "";
@@ -55,7 +61,7 @@ function gameLoop() {
   drawSnake();
 }
 
-requestAnimationFrame(gameLoop); // запуск цикла
+// requestAnimationFrame(gameLoop); // запуск цикла
 
 function drawSnake() {
   snake.x += snake.dx; // меняем координату змеи увеличивая на знаение скорости
@@ -124,18 +130,16 @@ function collisionBorder() {
 }
 
 function refreshGame() {
+  gameOver();
   scoreData.unshift(score);
 
   if (scoreData.length > 10) {
     scoreData.pop();
   }
-  drawScoreItem();
 
   score = 0;
   drawScore();
 
-  snake.x = 160;
-  snake.y = 160;
   snake.tails = [];
   snake.maxTails = 3;
   snake.dx = config.sizeCell;
@@ -153,7 +157,7 @@ function incScore() {
 }
 
 function drawScore() {
-  scoreBlock.innerHTML = score; // отображаем очки на странице
+  scoreBlock.innerHTML = `Your score: ${score}`; // отображаем очки на странице
 }
 
 function getRandomInt(min, max) {
@@ -162,6 +166,13 @@ function getRandomInt(min, max) {
 
 document.addEventListener("keydown", function (e) {
   ///вынести в отдельную функцию
+  if (e.code == "Enter") {
+    if (itBegin === 0) {
+      requestAnimationFrame(gameLoop);
+      itBegin = 1;
+      drawScore();
+    }
+  }
   if (e.code == "KeyW" || e.code == "ArrowUp") {
     snake.dy = -config.sizeCell;
     snake.dx = 0;
@@ -191,7 +202,16 @@ function getLocalStorage() {
 }
 window.addEventListener("load", getLocalStorage);
 
-alert(
-  'Привет! Таблица результатов заполняется после каждого проигрыша. Для того чтобы быстро проиграть можно нажать клавижу противоположную движению змейки (если ползет вправа нажать стрелку влево или "A" и т.д.'
-);
-console.log("все пункты задания выполнены");
+function gameOver() {
+  const title = document.querySelector(".gameover");
+  title.innerHTML = `GAME<br>OVER<br><br>Your score:<br>${score}`;
+  title.style.zIndex = "1";
+  snake.x = undefined;
+  snake.y = undefined;
+  setTimeout(() => {
+    title.style.zIndex = "-1";
+    drawScoreItem();
+    snake.x = 160;
+    snake.y = 160;
+  }, 2000);
+}
