@@ -1,95 +1,150 @@
-/* start */
-
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-}
-
-html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
     height: 100%;
-}
-
-body {
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #FA0556;
-    background-color: #353336;
+  }
+  
+  body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  
     min-height: 100%;
-    justify-content: center;
-
-}
-
-.header {
-}
-.header-container {
-    min-height: 100px;
+  
+    color: #fa0556;
+    background-color: #353336;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  
+  .header-container {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
-}
-.container {
+  
+    min-height: 100px;
+    padding: 10px;
+  }
+  
+  .container {
     max-width: 500px;
     margin: 0 auto;
-}
-.main {
-    flex-grow: 1;
-    display: flex;
+  }
+  
+  .score {
+    padding: 10px;
+  
+    border-radius: 15px;
+    background-color: #161618;
+    box-shadow: 0 0 40px 10px #161618;
+  }
+  
+  .main {
     align-items: center;
+    flex-grow: 1;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
-}
-
-.canvas-wrapper {
+    gap: 10px;
+  }
+  
+  .score-table {
+    padding: 10px;
+  
+    border-radius: 15px;
+    background-color: #161618;
+    box-shadow: 0 0 40px 10px #161618;
+  }
+  
+  .score-table-title {
+    text-align: center;
+  }
+  
+  .score-items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .score-item {
+    text-align: center;
+  }
+  
+  .score-item:nth-child(-n+3) {
+    font-size: 40px;
+  }
+  
+  .score-item:nth-child(n+4) {
+    font-size: 32px;
+  }
+  
+  .score-item:nth-child(n+8) {
+    font-size: 26px;
+  }
+  
+  .score-item:nth-child(even) {
+    color: #a00034;
+  }
+  
+  .canvas-wrapper {
     width: max-content;
     height: max-content;
-    /* width: 320px; */
-    /* height: 400px; */
-	background-color: #161618;
-	border-radius: 5px;
-	border: 10px solid #161618;
-	box-shadow: 0px 0px 40px 10px #161618;
-
-	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
-}
-.game-canvas {
-    /* width: 320px;
-    height: 400px; */
-    /* width: 100%;
-    height: 100%; */
-	display: block;
-	border-radius: 5px;	
-}
-.footer {
-}
-.footer-container {
-    min-height: 80px;
+  
+    border: 10px solid #161618;
+    border-radius: 5px;
+    background-color: #161618;
+  
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
+    box-shadow: 0 0 40px 10px #161618;
+  }
+  
+  .game-canvas {
+    display: block;
+  
+    border-radius: 5px;
+  }
+  
+  .footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* color: #fff; */
-}
-.rss-logo {
+    justify-content: space-between;
+  
+    min-height: 80px;
+  
+    color: #a00034;
+  }
+  
+  .rss-logo {
     width: 135px;
     height: 50px;
+  
+    background-image: url("./assets/svg/rss.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(./assets/svg/rss.svg);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(82%) saturate(7391%) hue-rotate(329deg) brightness(98%) contrast(121%);
   }
-
+  
   .rss-logo:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-      contrast(87%);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(6379%) hue-rotate(335deg) brightness(99%) contrast(98%);
   }
   
   a {
-    color: inherit;
     transition: 0.5ms;
+  
+    color: inherit;
   }
   
   a:hover {
-    color: #bdae82;
+    color: #fa0556;
   }
+  
